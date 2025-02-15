@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras Oncológicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <span>CalcOnco</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#superficie">Superficie Corporal</a></li>
+                <li><a href="#carboplatino">Carboplatino</a></li>
+                <li><a href="#renal">Función Renal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Calculadoras Oncológicas</h1>
+        <p>Herramientas precisas para cálculos médicos especializados</p>
+    </header>
+
+    <div class="container">
+        <section id="superficie" class="calculator-section">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-ruler"></i>
+                    <h2>Calculadora de Superficie Corporal</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" placeholder="Ingrese su peso">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="altura">Altura (cm):</label>
+                        <input type="number" id="altura" placeholder="Ingrese su altura">
+                    </div>
+                    
+                    <button id="calcularSC" class="btn-calculate">Calcular</button>
+                    <div class="result">
+                        <h3>Superficie Corporal: <span id="resultadoSC">-</span> m²</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carboplatino" class="calculator-section">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-flask"></i>
+                    <h2>Calculadora de Carboplatino (AUC)</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="creatinina">Creatinina (mg/dL):</label>
+                        <input type="number" id="creatinina" placeholder="Ingrese creatinina sérica">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="edad">Edad (años):</label>
+                        <input type="number" id="edad" placeholder="Ingrese edad">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="pesoCarboplatino">Peso (kg):</label>
+                        <input type="number" id="pesoCarboplatino" placeholder="Ingrese su peso">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo">
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="auc">AUC deseado:</label>
+                        <input type="number" id="auc" placeholder="Ingrese AUC">
+                    </div>
+                    
+                    <button id="calcularCarboplatino" class="btn-calculate">Calcular</button>
+                    <div class="result">
+                        <h3>Dosis de Carboplatino: <span id="resultadoCarboplatino">-</span> mg</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="renal" class="calculator-section">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-kidney"></i>
+                    <h2>Calculadora de Función Renal (Cockcroft-Gault)</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="creatininaRenal">Creatinina (mg/dL):</label>
+                        <input type="number" id="creatininaRenal" placeholder="Ingrese creatinina sérica">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="edadRenal">Edad (años):</label>
+                        <input type="number" id="edadRenal" placeholder="Ingrese edad">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="pesoRenal">Peso (kg):</label>
+                        <input type="number" id="pesoRenal" placeholder="Ingrese su peso">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="sexoRenal">Sexo:</label>
+                        <select id="sexoRenal">
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                        </select>
+                    </div>
+                    
+                    <button id="calcularRenal" class="btn-calculate">Calcular</button>
+                    <div class="result">
+                        <h3>Clearance de Creatinina: <span id="resultadoRenal">-</span> mL/min</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CalcOnco</h3>
+                <p>Calculadoras médicas especializadas para profesionales de la salud</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#superficie">Superficie Corporal</a></li>
+                    <li><a href="#carboplatino">Carboplatino</a></li>
+                    <li><a href="#renal">Función Renal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Información</h3>
+                <p>© 2024 CalcOnco. Todos los derechos reservados.</p>
+                <p>Uso exclusivo para profesionales de la salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
